@@ -1,0 +1,17 @@
+.grid {
+  display: grid;
+  grid-gap: 40px;
+  grid-auto-columns: 1fr;
+  grid-template-rows: 1fr .5fr .5fr 1fr;
+  width: 90%;
+  margin: 0, auto;
+}
+body {
+  background-color: rgba(214, 187, 118, 0.27);
+}
+
+.Layout {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+}
