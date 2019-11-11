@@ -1,44 +1,97 @@
 body, html {
   height: 100vh;
   }
+
   body {
   display: grid;
   margin: 0;
-  grid-template-columns: 15% 45% 40%;
-  grid-template-rows: 20% 40% 30% 10%;
+  font-family: fantasy;
+  grid-template-columns: 10% 45% 35% 10%;
+  grid-template-rows: 25% 5% 35% 25% 10%;
+  grid-gap: 5px;
   grid-template-areas:
-  "Sidebar header nav"
-  "Sidebar section div"
-  "Sidebar main main"
-  "Sidebar foot foot  "
+  ". header header ."
+  ". nav nav ."
+  ". section div ."
+  ". main main ."
+  ". foot foot ."
 }
-body {
-  background-color: rgba(214, 187, 118, 0.27);
-}
+
 aside {
-  grid-area: Sidebar;
-background-color: blue;}
-Nav {
-  grid-area: nav;
-  background-color: red;
+  grid-area: side;
+  background-color: brown;
 }
+
+nav {
+  grid-area: nav;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  margin-left: 10%;
+  padding-top: 15px;
+}
+
+nav a {
+  color: white;
+}
+
+.navContainer{
+
+}
+
 header {
   grid-area: header;
-  background-color: yellow;
+  background-color: black;
+  color: white;
+  text-align: center;
 }
+
+h1 {
+    font-size: 6em;
+}
+
 section {
   grid-area: section;
-  background-color: purple;
 }
+
+section img:hover {
+  animation-name: appear;
+  animation-duration: 2s;
+}
+@keyframes appear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+section>img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 div {
   grid-area: div;
-  
 }
+
 main {
   grid-area: main;
-background-color: orange;
+  background-color: orange;
   }
+
 footer {
   grid-area: foot;
-  background-color: black;
+  background-color: grey;
 }
