@@ -1,17 +1,44 @@
-.grid {
+body, html {
+  height: 100vh;
+  }
+  body {
   display: grid;
-  grid-gap: 40px;
-  grid-auto-columns: 1fr;
-  grid-template-rows: 1fr .5fr .5fr 1fr;
-  width: 90%;
-  margin: 0, auto;
+  margin: 0;
+  grid-template-columns: 15% 45% 40%;
+  grid-template-rows: 20% 40% 30% 10%;
+  grid-template-areas:
+  "Sidebar header nav"
+  "Sidebar section div"
+  "Sidebar main main"
+  "Sidebar foot foot  "
 }
 body {
   background-color: rgba(214, 187, 118, 0.27);
 }
-
-.Layout {
-  background-color: blue;
-  color: white;
-  padding: 10px;
+aside {
+  grid-area: Sidebar;
+background-color: blue;}
+Nav {
+  grid-area: nav;
+  background-color: red;
+}
+header {
+  grid-area: header;
+  background-color: yellow;
+}
+section {
+  grid-area: section;
+  background-color: purple;
+}
+div {
+  grid-area: div;
+  
+}
+main {
+  grid-area: main;
+background-color: orange;
+  }
+footer {
+  grid-area: foot;
+  background-color: black;
 }
