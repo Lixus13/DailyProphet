@@ -13,7 +13,7 @@ scroll-behavior: smooth;
   margin: 0;
   font-family: HarryP;
   grid-template-columns: 8.1% 39.9% 41.1% 7.9%;
-  grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+  grid-template-rows:  auto auto auto 43.8% auto 38.7% auto auto auto;
   grid-gap: 1%;
   grid-template-areas:
   "nav nav nav nav"
@@ -23,7 +23,7 @@ scroll-behavior: smooth;
   ". main main ."
   ". win seeker ."
   ". Newsletter Newsletter ."
-  ". subscribe paper ."
+  ". paper subscribe ."
   "foot foot foot foot"
   }
   nav {
@@ -43,7 +43,7 @@ scroll-behavior: smooth;
     display: inline-block;
     margin-left: 10.2%;
     margin-top: 20px;
-    font-size: 1.5em;
+    font-size: 1.75em;
   }
 
   nav a {
@@ -55,9 +55,9 @@ scroll-behavior: smooth;
 
   nav img {
     float: left;
-    height:45px;
+    height:52px;
     width: auto;
-    margin-left: 115px;
+    margin-left: 10%;
     margin-top: 10px;
     margin-bottom: 7px;
   }
@@ -70,13 +70,16 @@ header {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 9em;
 }
 h2 {
-  font-size: 2em;
+  font-size: 3em;
 }
 h3{
-  font-size: 5em;
+  font-size: 6em;
+}
+h4 {
+	font-size: 2em;
 }
 
 .News {
@@ -93,7 +96,6 @@ h3{
   margin-bottom: 15px;
 
 }
-
 .sirius img {
   object-fit: cover;
   width: 100%;
@@ -119,26 +121,32 @@ main {
   grid-area: seeker;
   margin: 7px;
 }
+.seeker img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
 
 .win {
   grid-area: win;
-  font-size: 2em;
-  margin-left: 40px;
-  padding-top: 10px;
+  text-align: center;
+
 }
 .Newsletter {
   grid-area: Newsletter;
   background-color: black;
   color: white;
   text-align: center;
+  font-size: 2em;
   }
 .paper {
   grid-area: paper;
-  margin: 10px;
 }
+
 .subscribe {
   grid-area: subscribe;
-  font-size: 2em;
 }
 
 #myBtn {
